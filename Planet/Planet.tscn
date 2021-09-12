@@ -6,3 +6,9 @@
 [node name="Planet" type="Sprite"]
 texture = ExtResource( 2 )
 script = ExtResource( 3 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -0.499998, -5.96046e-07 )
+scale = Vector2( 6.25, 6.1 )
+
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
