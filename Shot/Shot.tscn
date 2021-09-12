@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Shot/shot.png" type="Texture" id=1]
+[ext_resource path="res://Shot/Shot.gd" type="Script" id=2]
+[ext_resource path="res://Shot/shot.wav" type="AudioStream" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 3.97812
+height = 8.02196
+
+[node name="Shot" type="Area2D"]
+z_index = -1
+collision_layer = 4
+collision_mask = 10
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 0.0331075, -0.0993247 )
+scale = Vector2( 0.39412, 0.791418 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

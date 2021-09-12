@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Rocket/Rocket.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/background.png" type="Texture" id=2]
+[ext_resource path="res://World/Background.gd" type="Script" id=3]
+[ext_resource path="res://World/PlayerShotManager.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 512, 300 )
+
+[node name="World" type="Area2D"]
+collision_layer = 16
+collision_mask = 7
+
+[node name="Background" type="Sprite" parent="."]
+scale = Vector2( 1, 2 )
+z_index = -10
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( -280, -480 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1600, 960 )
+script = ExtResource( 3 )
+
+[node name="PlayerShotManager" type="Node" parent="."]
+script = ExtResource( 4 )
+
+[node name="Rocket" parent="." instance=ExtResource( 1 )]
+position = Vector2( 506, 546 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 509, 300 )
+shape = SubResource( 1 )
+
+[connection signal="PlayerShotEvent" from="Rocket" to="PlayerShotManager" method="_on_Rocket_PlayerShotEvent"]
