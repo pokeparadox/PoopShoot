@@ -9,7 +9,7 @@ radius = 3.97812
 height = 8.02196
 
 [node name="Shot" type="Area2D"]
-z_index = -1
+z_index = 29
 collision_layer = 4
 collision_mask = 10
 script = ExtResource( 2 )

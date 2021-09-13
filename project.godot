@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Sprite",
+"class": "Planet",
+"language": "GDScript",
+"path": "res://Planet/Planet.gd"
+}, {
 "base": "Area2D",
 "class": "Shot",
 "language": "GDScript",
 "path": "res://Shot/Shot.gd"
 } ]
 _global_script_class_icons={
+"Planet": "",
 "Shot": ""
 }
 
@@ -28,6 +34,7 @@ config/icon="res://Poop/poop.png"
 
 Resolution="*res://Utils/Resolution.gd"
 Random="*res://Utils/Random.gd"
+CalculationCache="*res://Utils/CalculationCache.gd"
 
 [compression]
 
