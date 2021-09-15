@@ -22,8 +22,15 @@ tracks/0/keys = {
 [node name="Star" type="Sprite"]
 texture = ExtResource( 2 )
 hframes = 4
+frame = 2
 script = ExtResource( 3 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Twinkle"
 anims/Twinkle = SubResource( 1 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -4.76837e-07, -0.187287 )
+scale = Vector2( 1.56187, 1.59932 )
+
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

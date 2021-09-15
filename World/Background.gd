@@ -1,5 +1,5 @@
 extends Sprite
-const SCROLL_SPEED: int = 5
+const SCROLL_SPEED: int = 1
 var maxScroll : float
 var startScroll: float = 0.0
 

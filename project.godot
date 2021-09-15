@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node2D",
+"class": "LittleStar",
+"language": "GDScript",
+"path": "res://Stars/LittleStar.gd"
+}, {
 "base": "Sprite",
 "class": "Planet",
 "language": "GDScript",
@@ -18,10 +23,17 @@ _global_script_classes=[ {
 "class": "Shot",
 "language": "GDScript",
 "path": "res://Shot/Shot.gd"
+}, {
+"base": "Sprite",
+"class": "Star",
+"language": "GDScript",
+"path": "res://Stars/Star.gd"
 } ]
 _global_script_class_icons={
+"LittleStar": "",
 "Planet": "",
-"Shot": ""
+"Shot": "",
+"Star": ""
 }
 
 [application]
@@ -33,8 +45,8 @@ config/icon="res://Poop/poop.png"
 [autoload]
 
 Resolution="*res://Utils/Resolution.gd"
-Random="*res://Utils/Random.gd"
 CalculationCache="*res://Utils/CalculationCache.gd"
+Random="*res://Utils/Random.gd"
 
 [compression]
 

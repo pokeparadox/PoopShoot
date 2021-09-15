@@ -1,5 +1,5 @@
 extends Node
-
+var rand = RandomNumberGenerator.new()
 var MaxValue = 1
 var MinValue = 0
 
@@ -7,26 +7,24 @@ func SetLimits(minV,  maxV):
 	MaxValue = maxV
 	MinValue = minV
 
-func QuickNextInt(minV, maxV) -> int:
-	return randi()%(int(maxV)+1)+int(minV)
+func NextFloat() -> float:
+	return rand_range(MinValue, MaxValue)
 
 func NextInt() -> int:
-	return QuickNextInt(MinValue, MaxValue)
+	return rand.randi_range(MinValue, MaxValue)
+
+func NextFloatRange(minV, maxV) -> float:
+	return rand_range(minV, maxV)
+
+func NextIntRange(minV, maxV) -> int:
+	return rand.randi_range(minV, maxV)
 
 func NextBool() -> bool:
-	var val = QuickNextInt(0,1)
-	if val == 1:
+	if rand.randi_range(0, 1) == 1:
 		return true
 	else:
 		return false
 
-func QuickNextFloat(minV, maxV) -> float:
-	return rand_range(minV,maxV)
-
-func NextFloat() -> float:
-	return QuickNextFloat(MinValue, MaxValue)
-
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
 	randomize()
+	rand.randomize()
