@@ -19,6 +19,8 @@ func SpawnStar(pos = Vector2.ZERO):
 	else:
 		s.global_position = Vector2(Random.NextIntRange(0, Resolution.GetWidth()),-50)
 	var vec = CalculationCache.DegreesToVector2d(0)
+	var scaler = Random.NextFloatRange(0.1,1)
+	vec *= scaler
 	vec.x = -vec.x
 	s.setHeading(vec)
 	add_child(s)

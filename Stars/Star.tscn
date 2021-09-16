@@ -20,6 +20,7 @@ tracks/0/keys = {
 }
 
 [node name="Star" type="Sprite"]
+z_index = -50
 texture = ExtResource( 2 )
 hframes = 4
 frame = 2

@@ -1,5 +1,4 @@
 extends Node
-
 var Planet = preload("res://Planet/Planet.tscn")
 onready var timer = Timer.new()
 func _ready() -> void:
@@ -9,7 +8,7 @@ func _ready() -> void:
 	timer.connect("timeout", self, "on_timer_timeout")
 
 func UpdateNextSpawn():
-	timer.set_wait_time(10 + Random.NextIntRange(0,80))
+	timer.set_wait_time(10 + Random.NextIntRange(0,50))
 	timer.start()
 
 func on_timer_timeout():
