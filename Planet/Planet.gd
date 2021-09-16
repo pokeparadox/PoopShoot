@@ -7,7 +7,7 @@ func _ready():
 	Random.SetLimits(0.1,2.0)
 	var s := Random.NextFloat()
 	scale = Vector2(s,s)
-	z_index = -int((1/s))*20
+	z_index = -10 -(20 - (scale.x*10))
 
 func setHeading(heading) -> void:
 	Heading = heading.normalized()
