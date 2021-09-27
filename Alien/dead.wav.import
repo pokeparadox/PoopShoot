@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/shot.wav-843b02f1f5800005643482f1bdac1160.sample"
+path="res://.import/dead.wav-7b8a51e70472b31169f8cd5eb1bdf541.sample"
 
 [deps]
 
-source_file="res://Shot/shot.wav"
-dest_files=[ "res://.import/shot.wav-843b02f1f5800005643482f1bdac1160.sample" ]
+source_file="res://Alien/dead.wav"
+dest_files=[ "res://.import/dead.wav-7b8a51e70472b31169f8cd5eb1bdf541.sample" ]
 
 [params]
 

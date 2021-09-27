@@ -2,7 +2,7 @@ extends Node2D
 class_name LittleStar
 
 const SCROLL_SPEED: int = 2
-var Heading := Vector2.ZERO
+var Heading := Vector2(0, 1)
 
 export var Colour1 = Color(0.5, 0.5 , 0.5)
 export var Colour2 = Color(1,1,0)

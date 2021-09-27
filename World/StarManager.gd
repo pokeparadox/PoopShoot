@@ -29,14 +29,14 @@ func SpawnSmallStars(pos = Vector2.ZERO):
 	var rang := 5
 	if (pos != Vector2.ZERO):
 		rang = 1
-	for i in range(0,rang):
+	for _i in range(0,rang):
 		var ss = SmallStar.instance()
 		if(pos != Vector2.ZERO):
 			ss.global_position = pos
 		else:
 			ss.global_position = Vector2(Random.NextIntRange(0, Resolution.GetWidth()),-50)
-		var vec = CalculationCache.DegreesToVector2d(0)
-		ss.setHeading(vec)
+		#var vec = CalculationCache.DegreesToVector2d(0)
+		#ss.setHeading(vec)
 		add_child(ss)
 
 func InitStarField():
