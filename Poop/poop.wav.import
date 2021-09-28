@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/poop.wav-83d61ff5fc0f857ec8d67df31f077cd4.sample"
+
+[deps]
+
+source_file="res://Poop/poop.wav"
+dest_files=[ "res://.import/poop.wav-83d61ff5fc0f857ec8d67df31f077cd4.sample" ]
+
+[params]
+
+force/8_bit=true
+force/mono=true
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=1

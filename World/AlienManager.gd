@@ -13,6 +13,6 @@ func UpdateNextSpawn():
 
 func on_timer_timeout():
 	var a = Alien.instance()
-	a.global_position = Vector2(Random.NextIntRange(150, Resolution.GetWidth()),-150)
+	a.global_position = Vector2(Random.NextIntRange(150, Resolution.GetWidth()-150),-10)
 	add_child(a)
 	UpdateNextSpawn()

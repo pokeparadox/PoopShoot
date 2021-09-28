@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/rapidfire.wav-6e6c41e05a09d5901b743853a7e0bd0a.sample"
+
+[deps]
+
+source_file="res://Shot/rapidfire.wav"
+dest_files=[ "res://.import/rapidfire.wav-6e6c41e05a09d5901b743853a7e0bd0a.sample" ]
+
+[params]
+
+force/8_bit=true
+force/mono=true
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=1
