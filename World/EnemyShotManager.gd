@@ -14,5 +14,5 @@ func ShootEnemyPoop(enemyPos, targetPos):
 	#shot.startShot(position, GetHeadingVec(heading), heading)
 	add_child(shot)
 
-func _on_DummyAlien_AlienPoopEvent(myPos, target) -> void:
+func _on_AlienManager_AlienPoopEvent(myPos, target) -> void:
 	ShootEnemyPoop(myPos, target)
