@@ -5,7 +5,16 @@ signal AlienPoopEvent(myPos, target)
 const direction := Vector2(0,1)
 const SPEED = 100
 const maxPoops: int = 10
+const lifeTime = 10
 var currentPoops: int = 0
+
+func _ready() -> void:
+	var timer = Timer.new()
+	timer.connect("timeout",self,"_on_timer_timeout")
+	add_child(timer)
+	timer.set_wait_time(lifeTime)
+	timer.start()
+	add_to_group("Aliens")
 
 func _physics_process(delta: float) -> void:
 	global_position += delta * SPEED * direction
@@ -33,4 +42,7 @@ func _on_Area2D_area_entered(area: Area2D) -> void:
 		$Dead.play()
 
 func _on_Dead_finished() -> void:
+	queue_free()
+
+func _on_timer_timeout() -> void:
 	queue_free()

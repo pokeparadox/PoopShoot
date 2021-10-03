@@ -40,7 +40,7 @@ z_index = 30
 [node name="AlienManager" type="Node" parent="."]
 script = ExtResource( 7 )
 
-[connection signal="ChangeDirectionEvent" from="Rocket" to="PlanetManager" method="_on_Rocket_ChangeDirectionEvent"]
 [connection signal="ChangeDirectionEvent" from="Rocket" to="StarManager" method="_on_Rocket_ChangeDirectionEvent"]
+[connection signal="ChangeDirectionEvent" from="Rocket" to="PlanetManager" method="_on_Rocket_ChangeDirectionEvent"]
 [connection signal="PlayerShotEvent" from="Rocket" to="PlayerShotManager" method="_on_Rocket_PlayerShotEvent"]
 [connection signal="AlienPoopEvent" from="AlienManager" to="EnemyShotManager" method="_on_AlienManager_AlienPoopEvent"]
