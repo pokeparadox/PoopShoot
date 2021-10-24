@@ -11,9 +11,8 @@ export var Colour3 = Color(1, 1 , 1)
 export var Colour4 = Color(0.25, 0.25, 1)
 export var Dimensions = Vector2(1,1)
 var ActiveColour = Colour1
-
+onready var timer = Timer.new()
 func _ready() -> void:
-	var timer = Timer.new()
 	timer.connect("timeout",self,"_on_timer_timeout")
 	add_child(timer)
 	timer.set_wait_time(lifeTime)
@@ -35,12 +34,21 @@ func _physics_process(delta: float) -> void:
 	if Random.NextBool():
 		update()
 	global_position += delta * SCROLL_SPEED * Heading
-
-func _on_VisibilityNotifier2D_screen_exited() -> void:
-	queue_free()
-
 func _draw():
 	draw_rect(Rect2(get_position(), Dimensions), ActiveColour)
 
+func reset(pos = Vector2.ZERO):
+	if(timer != null):
+		timer.start()
+
+	if(pos != Vector2.ZERO):
+		global_position = pos
+	else:
+		var offset: int = 50
+		global_position = Vector2(Random.NextIntRange(offset, Resolution.GetWidth()-offset),-Random.NextIntRange(offset, 2*offset))
+
+func _on_VisibilityNotifier2D_screen_exited() -> void:
+	reset()
+
 func _on_timer_timeout() -> void:
-	queue_free()
+	reset()
